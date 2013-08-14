@@ -102,7 +102,7 @@ task copyMod( type:Copy, dependsOn: 'classes', description: 'Assemble the module
   }
 }
 
-task copyModJson( type:Copy, dependsOn: 'copyMod', description: '' ) {
+task copyModJson( type:Copy, dependsOn: 'copyMod', description: 'Copy the mod.json into the local mods directory for runmod auto-redeploy' ) {
   file("mods/$moduleName").mkdirs()
   from "build/mods/$moduleName/mod.json"
   into "mods/$moduleName"
