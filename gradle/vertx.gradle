@@ -102,6 +102,12 @@ task copyMod( type:Copy, dependsOn: 'classes', description: 'Assemble the module
   }
 }
 
+task copyModJson( type:Copy, dependsOn: 'copyMod', description: '' ) {
+  file("mods/$moduleName").mkdirs()
+  from "build/mods/$moduleName/mod.json"
+  into "mods/$moduleName"
+}
+
 task modZip( type: Zip, dependsOn: 'pullInDeps', description: 'Package the module .zip file') {
   group = 'vert.x'
   classifier = "mod"
