@@ -1,8 +1,8 @@
 {
 
   // Java verticle
-  //"main":"com.mycompany.myproject.PingVerticle",
-  "main":"HelloWorldVerticle",
+  "main":"com.mycompany.myproject.PingVerticle",
+  //"main":"HelloWorldVerticle",
   "auto-redeploy": true,
 
   // If your module is going to be registered in the Vert.x module registry you will also need the following
